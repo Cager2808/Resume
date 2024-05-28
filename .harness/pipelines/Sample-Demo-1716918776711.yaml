@@ -14,13 +14,6 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: npm
-                  identifier: Echo_Welcome_Message
-                  spec:
-                    shell: Bash
-                    command: npm install
-              - step:
-                  type: Run
                   name: angular cli
                   identifier: angular_cli
                   spec:

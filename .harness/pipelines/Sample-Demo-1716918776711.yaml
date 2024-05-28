@@ -14,11 +14,25 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: Echo Welcome Message
+                  name: npm
                   identifier: Echo_Welcome_Message
                   spec:
+                    shell: Bash
+                    command: npm install
+              - step:
+                  type: Run
+                  name: angular cli
+                  identifier: angular_cli
+                  spec:
                     shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    command: npm install -g @angular/cli
+              - step:
+                  type: Run
+                  name: version check
+                  identifier: version_check
+                  spec:
+                    shell: Sh
+                    command: ng v
           platform:
             os: Linux
             arch: Amd64

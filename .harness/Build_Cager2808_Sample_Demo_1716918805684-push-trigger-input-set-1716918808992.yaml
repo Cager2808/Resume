@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Cager2808_Sample_Demo_1716918805684-push-trigger-input-set
+  identifier: Build_Cager2808_Sample_Demo_1716918805684pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Demo_angular
+  pipeline:
+    identifier: Build_Cager2808_Sample_Demo_1716918805684
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
